@@ -5,46 +5,57 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>WeatherPrepared</title>
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
     <link rel="stylesheet" href="CSS/style.css">
     <link rel="stylesheet" href="CSS/weeklyForecast.css">
     <link rel="stylesheet" href="CSS/currentWeather.css">
 </head>
 <body>
-    <nav id="navbar">
-        <h2 id="title">WeatherPrepared</h2>
+    <nav id="navbar" class="navbar navbar-dark bg-dark">
+            <h2 class="navbar-brand">WeatherPrepared</h2>
     </nav>
-    <section id="main-content">
-        <div class="container">
-            <div id="location">
-                <center>
-                    <h2 style="color: black;"></h2>
-                    <br>
-                    <form id="locationInput"    action="#">
-                        <label for="Longitude">Latitude: </label>
-                        <input type="text" id="Longitude" placeholder="Enter Latitude" name="Longitude">
-                        
-                        <label for="Latitude">Longitude: </label>
-                        <input type="text" id="Latitude" placeholder="Enter Longitude" name="Latitude">
-
-                        <input type="submit">
-                    </form>
-                    </center>
-            </div>
-            <div id="curWeather">
-                <h1>Current Weather in <span id="locationText"></span></h1>
-                <div id='curWeatherContainer'>
-                    <img id="curWeatherImage" src="" alt="">
-                </div>                
-                <div id="curWeatherInfo"></div>
-            </div>
-            <ul id="weeklyForecast"></ul>
-        </div>
-    </section>
-    <footer id="footer">
-        <p>&copy; Junaet Mahbub</p>
-        <p>All weather Information is taken from <a href="https://openweathermap.org/">OpenWeatherMap</a></p>
+        </center>
+            <section id="main-content" class="mt-5">
+                
+                <div class="container d-flex align-items-center justify-content-center">
+                    <div id="location">
+                        <div class="text-center">
+                            <h2 style="color: black;"></h2>
+                            <br>
+                            <form id="locationInput" action="#">
+                                <div class="form-group">
+                                    <label for="Longitude">Latitude:</label>
+                                    <input type="text" class="form-control" id="Longitude" placeholder="Enter Latitude" name="Longitude">
+                                </div>
+                                <div class="form-group">
+                                    <label for="Latitude">Longitude:</label>
+                                    <input type="text" class="form-control" id="Latitude" placeholder="Enter Longitude" name="Latitude">
+                                </div>
+                                <button type="submit" class="btn btn-primary">Submit</button>
+                            </form>
+                        </div>
+                    </div>
+                    <div id="curWeather" class="mt-5">
+                        <h2 class="m-3">Current Weather in <span id="locationText"></span></h2>
+                        <div id='curWeatherContainer'>
+                            <img id="curWeatherImage" src="" alt="">
+                        </div>                
+                        <div id="curWeatherInfo"></div>
+                    </div>
+                    <ul id="weeklyForecast"></ul>
+                </div>
+            </section>
+        </center>
+    <footer id="footer" class="bg-dark text-white mt-5 py-3">
+            <p>&copy; Junaet Mahbub</p>
+            <p>All weather Information is taken from <a href="https://openweathermap.org/">OpenWeatherMap</a></p>
     </footer>
-    <script src="JS/backup.js"></script>
+    <!-- Bootstrap JS and Popper.js (required for Bootstrap JavaScript plugins) -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    <script src="JS/app.js"></script>
     <!-- <script src="JS/geolocation.js"></script> -->
 </body>
 </html>
