@@ -82,37 +82,7 @@ input[type="submit"] {
 
 
 /* Style the current weather section */
-#curWeather {
-    margin-top: 20px;
-    text-align: center;
-}
 
-
-#curWeatherContainer {
-    margin-top: 10px;
-}
-
-#curWeatherImage {
-    max-width: 100%;
-    height: auto;
-}
-
-#curWeatherInfo {
-    margin-top: 10px;
-    display: flex;
-    flex-direction: column;
-}
-
-#weeklyForecast {
-    list-style-type: none;
-    padding: 0;
-    margin-top: 20px;
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    flex-wrap: wrap;
-    /* flex-direction: column; */
-}
 
 /* Style the footer */
 #footer {

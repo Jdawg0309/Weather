@@ -15,41 +15,75 @@
     <nav id="navbar" class="navbar navbar-dark bg-dark">
             <h2 class="navbar-brand">WeatherPrepared</h2>
     </nav>
-        </center>
-            <section id="main-content" class="mt-5">
-                
-                <div class="container d-flex align-items-center justify-content-center">
-                    <div id="location">
-                        <div class="text-center">
-                            <h2 style="color: black;"></h2>
-                            <br>
-                            <form id="locationInput" action="#">
-                                <div class="form-group">
-                                    <label for="Longitude">Latitude:</label>
-                                    <input type="text" class="form-control" id="Longitude" placeholder="Enter Latitude" name="Longitude">
-                                </div>
-                                <div class="form-group">
-                                    <label for="Latitude">Longitude:</label>
-                                    <input type="text" class="form-control" id="Latitude" placeholder="Enter Longitude" name="Latitude">
-                                </div>
-                                <button type="submit" class="btn btn-primary">Submit</button>
-                            </form>
-                        </div>
+        <section id="main-content" class="mt-5">
+            
+            <div class="container d-flex align-items-center justify-content-center flex-wrap">
+                <div  id="location" class="container d-flex align-items-center justify-content-center">
+                    <div class="text-center d-flex flex-row align-items-center justify-content-center flex-wrap">
+                        <form id="GPSForm" class="p-3 border locationInput m-5 d-flex flex-column align-items-center justify-content-center" action="#">
+                            <div class="form-group">
+                                <label for="Longitude">Latitude:</label>
+                                <input type="text" class="form-control" id="Longitude" placeholder="Enter Latitude" name="Longitude">
+                            </div>
+                            <div class="form-group">
+                                <label for="Latitude">Longitude:</label>
+                                <input type="text" class="form-control" id="Latitude" placeholder="Enter Longitude" name="Latitude">
+                            </div>
+                            <button type="submit" class="btn btn-primary">Submit</button>
+                        </form>
+                        <h2 class="display-2 text-dark">OR</h2>
+                        <form  id="addressForm" class="p-3 border locationInput m-5">
+                            <div class="form-group">
+                                <label for="street">Street Address:</label>
+                                <input type="text" class="form-control" id="street" name="street" required>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="city">City:</label>
+                                <input type="text" class="form-control" id="city" name="city" required>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="state">State:</label>
+                                <input type="text" class="form-control" id="state" name="state" required>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="postalCode">Postal Code:</label>
+                                <input type="text" class="form-control" id="postalCode" name="postalCode" required>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="country">Country:</label>
+                                <select id="country" name="country" required class="form-control">
+                                    <option value="" disabled selected>Select a country</option>
+                                    <!-- Add more country options as needed -->
+                                    <option value="USA">United States</option>
+                                    <option value="CAN">Canada</option>
+                                    <option value="GBR">United Kingdom</option>
+                                    <!-- Add more country options as needed -->
+                                </select>
+                            </div>
+                            
+                    
+                            <button type="submit" class="btn btn-primary">Submit</button>
+                        </form>
                     </div>
-                    <div id="curWeather" class="mt-5">
-                        <h2 class="m-3">Current Weather in <span id="locationText"></span></h2>
-                        <div id='curWeatherContainer'>
-                            <img id="curWeatherImage" src="" alt="">
-                        </div>                
-                        <div id="curWeatherInfo"></div>
-                    </div>
-                    <ul id="weeklyForecast"></ul>
                 </div>
-            </section>
-        </center>
+                <div id="curWeather" class="mt-5">
+                    <h2 class="m-3">Current Weather in <span id="locationText"></span></h2>
+                    <div id='curWeatherContainer'>
+                        <img id="curWeatherImage" src="" alt="">
+                    </div>                
+                    <div id="curWeatherInfo"></div>
+                </div>
+                <ul id="weeklyForecast"></ul>
+            </div>
+        </section>
     <footer id="footer" class="bg-dark text-white mt-5 py-3">
             <p>&copy; Junaet Mahbub</p>
             <p>All weather Information is taken from <a href="https://openweathermap.org/">OpenWeatherMap</a></p>
+            <p>All Geocode Information is taken from <a href="https://geocode.maps.co">Geocode</a></p>
     </footer>
     <!-- Bootstrap JS and Popper.js (required for Bootstrap JavaScript plugins) -->
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
